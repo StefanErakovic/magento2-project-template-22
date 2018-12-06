@@ -24,26 +24,9 @@ after('cache:clear', 'cache:clear:opcache');
 localhost('build');
 
 // Remote Servers
-host('dev_master')
-    ->hostname('<hostname>')
-    ->user('<user>')
+localhost('master')
     ->set('deploy_path', '~')
-    ->stage('dev')
-    ->roles('master');
-
-host('stage_master')
-    ->hostname('<hostname>')
-    ->user('<user>')
-    ->set('deploy_path', '~')
-    ->stage('stage')
-    ->roles('master');
-
-host('prod_master')
-    ->hostname('<hostname>')
-    ->user('<user>')
-    ->set('deploy_path', '~')
-    ->stage('prod')
-    ->roles('master');
+    ->stage('prod');
 
 // ---- Multi-server Configuration ----
 // Tasks available only for specific roles
