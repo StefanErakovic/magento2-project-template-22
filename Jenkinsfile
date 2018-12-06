@@ -4,7 +4,8 @@ node {
     
     def hostStage
     def deployStatus
-
+    
+    env.PROJECT_NAME = 'test-mage';
     environment { 
         PROJECT_NAME = 'test-mage'
     }
