@@ -5,6 +5,10 @@ node {
     def hostStage
     def deployStatus
 
+    environment { 
+        PROJECT_NAME = 'test-mage'
+    }
+
     try {
         stage ('Preparations') {
             if (BRANCH_NAME == 'develop') {
